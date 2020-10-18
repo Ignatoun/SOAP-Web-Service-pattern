@@ -1,0 +1,90 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://com.example.soap_1/soap_gen"
+           targetNamespace="http://com.example.soap_1/soap_gen" elementFormDefault="qualified">
+
+    <xs:element name="getGSCByNameRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="attribute_name" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getGSCByNameResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="GSCType" type="tns:GSCType" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="GSCType">
+        <xs:sequence>
+            <xs:element name="attribute_name" type="xs:string" />
+            <xs:element name="attribute_value" type="xs:string" />
+            <xs:element name="attribute_desc" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="getAllGSCsRequest">
+        <xs:complexType/>
+    </xs:element>
+    <xs:element name="getAllGSCsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="GSCType" type="tns:GSCType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="serviceStatus">
+        <xs:sequence>
+            <xs:element name="statusCode" type="xs:string"/>
+            <xs:element name="message" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="addGSCRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="attribute_name" type="xs:string" />
+                <xs:element name="attribute_value" type="xs:string" />
+                <xs:element name="attribute_desc" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="addGSCResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
+                <xs:element name="GSCType" type="tns:GSCType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="updateGSCRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="attribute_name" type="xs:string" />
+                <xs:element name="attribute_value" type="xs:string" />
+                <xs:element name="attribute_desc" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="updateGSCResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="deleteGSCRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="attribute_name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="deleteGSCResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

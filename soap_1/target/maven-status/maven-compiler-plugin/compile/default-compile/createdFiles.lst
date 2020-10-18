@@ -1,0 +1,15 @@
+soap_1\example\com\soap_gen\GetGSCByNameResponse.class
+com\example\soap_1\Soap1Application.class
+soap_1\example\com\soap_gen\AddGSCRequest.class
+soap_1\example\com\soap_gen\ObjectFactory.class
+soap_1\example\com\soap_gen\DeleteGSCRequest.class
+soap_1\example\com\soap_gen\GetGSCByNameRequest.class
+soap_1\example\com\soap_gen\AddGSCResponse.class
+soap_1\example\com\soap_gen\UpdateGSCResponse.class
+soap_1\example\com\soap_gen\GetAllGSCsRequest.class
+soap_1\example\com\soap_gen\GSCType.class
+soap_1\example\com\soap_gen\DeleteGSCResponse.class
+soap_1\example\com\soap_gen\GetAllGSCsResponse.class
+soap_1\example\com\soap_gen\UpdateGSCRequest.class
+soap_1\example\com\soap_gen\ServiceStatus.class
+soap_1\example\com\soap_gen\package-info.class
